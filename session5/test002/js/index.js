@@ -43,54 +43,43 @@ function init() {
       //mesh.castShadow = true;
       mesh.position.x = x;
       mesh.position.z = y;
-      mesh.rotation.x = Math.random() * 2 * Math.PI;
-      mesh.rotation.y = Math.random() * 2 * Math.PI;
-      mesh.rotation.z = Math.random() * 2 * Math.PI;
-      var rotValX =(Math.random() *0.05) - 0.025;
-      var rotValY =(Math.random() *0.05) - 0.025;
-      var scValX =Math.random() - 0.5;
-      var scValY =Math.random() - 0.5;
-      var scValZ =Math.random() - 0.5;
-      rotX.push(rotValX);
-      rotY.push(rotValY);
-      scaleX.push(scValX);
-      scaleY.push(scValY);
-      scaleZ.push(scValZ);
-      scaleCube.push(scValX);
+      mesh.rotation.x = Math.random() * 2 * Math.PI;;
+      mesh.rotation.y = Math.random() * 2 * Math.PI;;
+      mesh.rotation.z = Math.random() * 2 * Math.PI;;
+      //console.log( "Rotation1:" + rotValue);
+      //console.log( "Rotation2:" + rotValue);
+      //Create random values for x and y, and store them
+  var randomValueX = (Math.random() * 0.1)- 0.05;
+      randomSpeedX.push(randomValueX);
+
       scene.add(mesh);
       cubes.push(mesh);
- }
+    }
 }
-
-  console.log(cubes);
+  //console.log(randomRotationX);
+  console.log("Init end");
+  console.log("DrawFrame Starts ******");
   document.body.appendChild(renderer.domElement);
 }
 
-var scaleCube = -3;
+var scaleCube = -5；
 
 function drawFrame(){
   requestAnimationFrame(drawFrame);
 
-  scaleCube +=0.02;
-  if (scaleCube > 3) scaleCube = -5;
+  scaleCube += 0.02；
+  if （scaleCube >3) scaleCube = -5;
 
-  cubes.forEach(function(c,i){
-    c.rotation.x = 0.2;//Rotate the object that is reference
-    c.rotation.y = 0.1;
-    c.scale.x = scaleCube;
-  });
+  cubes.forEach(function(c,i)){
+      c.rotation.x += rotX[i];
+      c.rotation.y += rotY[i];
+      scaleCube[i] += 0.1;
+});
 
-   console.log(scaleCube)
+  console.log(scaleCube);
 
-
-//console.log(randomRotationX);
-/*for (var i = 0; i < 5; i ++){
-  cubes[6].rotation.x += randomSpeedX[6];
-  cubes[18].rotation.x += randomSpeedX[18];
-}*/
   renderer.render(scene, camera);
 }
 
-
 init();
-drawFrame()
+drawFrame();

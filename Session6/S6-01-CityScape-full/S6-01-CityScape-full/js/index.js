@@ -52,7 +52,7 @@ function setupWorld() {
   floor = new THREE.Mesh(geo, mat);
   floor.rotation.x = -0.5 * Math.PI;
   floor.receiveShadow = true;
-//  scene.add(floor);
+  scene.add(floor);
 
   //Settings for models and material
   var geometry = new THREE.CubeGeometry( 1, 1, 1 );
@@ -60,7 +60,7 @@ function setupWorld() {
   //geometry.applyMatrix( new THREE.Matrix4().makeTranslation( 0, 0.5, 0 ) );
   var material = new THREE.MeshPhongMaterial({
   //  overdraw: true,
-    wireframe: true,
+    //wireframe: true,
     color: 0xcccccc});
 
   //Geometry to store all buildings of the city
