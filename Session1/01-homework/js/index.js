@@ -27,7 +27,7 @@ function init(){
 function geometry(){
   // Create a Cube Mesh with basic material ---------
   geometry1 = new THREE.CubeGeometry(30, 30, 100);
-  material1 = new THREE.MeshBasicMaterial( { color: "#FFCC66" } );
+  material1 = new THREE.MeshBasicMaterial( { color: "#00FA9A" } );
   mesh1 = new THREE.Mesh( geometry1, material1 );
   mesh1.position.z = -1000;
 
@@ -35,7 +35,7 @@ function geometry(){
   scene.add( mesh1 );
   // Create a Cube Mesh with basic material ---------
   geometry2 = new THREE.CubeGeometry(30, 30, 100);
-  material2 = new THREE.MeshBasicMaterial( { color: "#FFCC66" } );
+  material2 = new THREE.MeshBasicMaterial( { color: "#00FA9A" } );
   mesh2 = new THREE.Mesh( geometry2, material2 );
   mesh2.position.z = -1000;
 
@@ -43,7 +43,7 @@ function geometry(){
   scene.add( mesh2 );
   // Create a Cube Mesh with basic material ---------
   geometry3 = new THREE.TorusBufferGeometry(200, 7, 320, 2000);
-  material3 = new THREE.MeshBasicMaterial( { color: "#FFCC66" } );
+  material3 = new THREE.MeshBasicMaterial( { color: "#00FA9A" } );
   mesh3 = new THREE.Mesh( geometry3, material3 );
   mesh3.position.z = -1000;
 
@@ -52,7 +52,7 @@ function geometry(){
 
   // Create a Cube Mesh with basic material ---------
   geometry4 = new THREE.TorusBufferGeometry(200, 7, 320, 2000);
-  material4 = new THREE.MeshBasicMaterial( { color: "#FFCC66" } );
+  material4 = new THREE.MeshBasicMaterial( { color: "#00FA9A" } );
   mesh4 = new THREE.Mesh( geometry4, material4 );
   mesh4.position.z = -1000;
 

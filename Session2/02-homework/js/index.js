@@ -46,6 +46,9 @@ var material1 = new THREE.MeshNormalMaterial( { map: texture } );
 var texture = new THREE.TextureLoader().load ( 'texture/lensflare0.png');
 var material2 = new THREE.MeshNormalMaterial( { map: texture} );
 
+var texture = new THREE.TextureLoader().load ( 'texture/chuang.jpg');
+var material3 = new THREE.MeshNormalMaterial( { map: texture} );
+
 
 
 function geometry(){
@@ -115,7 +118,7 @@ function geometry(){
   // Create a Cube Mesh with basic material ---------
   geometry9 = new THREE.CubeGeometry(30, 30, 100);
   material9 = new THREE.MeshBasicMaterial( { color: "#FFCC66" } );
-  mesh9 = new THREE.Mesh( geometry9, material9 );
+  mesh9 = new THREE.Mesh( geometry9, material3 );
   mesh9.position.z = -5000;
   mesh9.position.x = 500;
   // Add mesh to scene
@@ -123,7 +126,7 @@ function geometry(){
   // Create a Cube Mesh with basic material ---------
   geometry10 = new THREE.CubeGeometry(30, 30, 100);
   material10 = new THREE.MeshBasicMaterial( { color: "#FFCC66" } );
-  mesh10 = new THREE.Mesh( geometry10, material10 );
+  mesh10 = new THREE.Mesh( geometry10, material3 );
   mesh10.position.z = -5000;
   mesh10.position.x = 500;
   // Add mesh to scene
@@ -131,7 +134,7 @@ function geometry(){
   // Create a Cube Mesh with basic material ---------
   geometry11 = new THREE.TorusBufferGeometry(200, 7, 320, 2000);
   material11 = new THREE.MeshBasicMaterial( { color: "#FFCC66" } );
-  mesh11 = new THREE.Mesh( geometry11, material11 );
+  mesh11 = new THREE.Mesh( geometry11, material3 );
   mesh11.position.z = -5000;
   mesh11.position.x = 500;
   // Add mesh to scene
@@ -140,7 +143,7 @@ function geometry(){
   // Create a Cube Mesh with basic material ---------
   geometry12 = new THREE.TorusBufferGeometry(200, 7, 320, 2000);
   material12 = new THREE.MeshBasicMaterial( { color: "#FFCC66" } );
-  mesh12 = new THREE.Mesh( geometry12, material12 );
+  mesh12 = new THREE.Mesh( geometry12, material3 );
   mesh12.position.z = -5000;
   mesh12.position.x = 500;
   // Add mesh to scene
